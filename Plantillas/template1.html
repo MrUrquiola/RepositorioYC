@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nuestro primer template</title>
+</head>
+<body>
+    <h2>Excelente es facil usar plantilla!</h2>
+
+    <h3> mi nombre es: {{ nombre }}</h3>
+    <h3> mi apellido es: {{ apellido }}</h3>
+    <h3> tengo: {{ edad }} anios</h3>
+    <h3> NOTAS:</h3>
+    <ul>
+        {% for nota in lista %}
+
+        {% if nota > 5 %}
+
+        <li>
+            <h4 style="color:red">Aprobado: {{ nota }}</h4>
+        </li>
+
+        {% else %}
+        <li>
+            <h4 style="color:aquamarine">Desaprobado: {{ nota }}</h4>
+        </li>
+        
+        {% endif %}
+        
+        {% endfor %}
+
+    </ul>
+</body>
+</html>

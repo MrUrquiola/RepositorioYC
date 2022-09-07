@@ -1,0 +1,25 @@
+{% extends "AppViaje/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+<h1 class="mb-5">BIENVENIDO AL BLOG DE EXPERIENCIAS DE VIAJES!</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<form action="{% url 'hotelformulario' %}" method="POST"> {% csrf_token %}
+
+<table>
+
+    {{ formulario.as_table }}
+
+</table>
+
+<input type="submit", value="Enviar">
+
+</form>
+
+<h2>{{ mensaje }}</h2>
+
+{% endblock %}

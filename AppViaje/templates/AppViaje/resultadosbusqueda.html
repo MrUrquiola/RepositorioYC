@@ -1,0 +1,27 @@
+{% extends "AppViaje/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+<h1 class="mb-5">BIENVENIDO AL BLOG DE EXPERIENCIAS DE VIAJES!</h1>
+{% endblock %}
+
+{% block contenido %}
+
+{% if mensaje %}
+<h2>{{ mensaje }}</h2>
+
+{% else %}
+
+<h1>Resultados de la busqueda</h1>
+
+{% for destino in destino %}
+
+<h2>{{ destino.pais }}</h2>
+<h2>{{ destino.ciudad }}</h2>
+
+{% endfor %}
+
+{% endif %}
+
+{% endblock %}

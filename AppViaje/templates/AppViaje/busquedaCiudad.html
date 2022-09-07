@@ -1,0 +1,23 @@
+{% extends "AppViaje/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+<h1 class="mb-5">BIENVENIDO AL BLOG DE EXPERIENCIAS DE VIAJES!</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<h1>Buscamos Ciudad</h1>
+
+<form action="{% url 'buscar' %}" method="GET"> {% csrf_token %}
+
+<p>Ciudad:<input type="text" name="ciudad", id="ciudad"></p>
+
+<input type="submit", value="Buscar">
+
+</form>
+
+<h2>{{ mensaje }}</h2>
+
+{% endblock %}
